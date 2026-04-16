@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Strategic Reset Intensive — Strategic Transformations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nv:#064680;--nvd:#032d56;--nvx:#021b36;
+  --tl:#2a7ca3;--tll:#58bbc2;
+  --pu:#31245a;--or:#ac6dbf;
+  --gd:#f3a712;--uri:#a473c0;
+  --wh:#fff;--ow:#f7f5fb;
+  --tx:#0f1929;--tm:#2e2650;--ts:#6b6090;
+  --bgnv:#edf1f8;--bgpu:#f1ecf9;--bgtl:#eaf4f7;--bggd:#fef8e7;
+  --r:10px;--rs:6px;
+  --sh:0 3px 18px rgba(6,70,128,.09);
+  --ease:.22s cubic-bezier(.4,0,.2,1);
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'DM Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--ow);color:var(--tx);line-height:1.7;min-height:100vh}
+button{font-family:var(--fb);cursor:pointer}
+a{color:var(--tl)}
+.hex{clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
+
+/* ── GATE ───────────────────────────────────────────────────────────────── */
+#gate{position:fixed;inset:0;z-index:9999;background:linear-gradient(140deg,var(--nvx) 0%,var(--pu) 55%,#180830 100%);display:flex;align-items:center;justify-content:center;padding:24px}
+.gc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:48px 40px;max-width:440px;width:100%;text-align:center;backdrop-filter:blur(16px);box-shadow:0 28px 80px rgba(0,0,0,.45)}
+.ghx{display:flex;justify-content:center;gap:7px;margin-bottom:26px}
+.ghx .hex{width:22px;height:26px;animation:hp 2.6s ease-in-out infinite}
+.ghx .hex:nth-child(1){background:var(--tll);animation-delay:0s}
+.ghx .hex:nth-child(2){background:var(--or);animation-delay:.25s}
+.ghx .hex:nth-child(3){background:var(--gd);animation-delay:.5s}
+.ghx .hex:nth-child(4){background:var(--tl);animation-delay:.75s}
+.ghx .hex:nth-child(5){background:var(--uri);animation-delay:1s}
+@keyframes hp{0%,100%{opacity:.45;transform:scaleY(1)}50%{opacity:.9;transform:scaleY(1.12)}}
+.go{font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--tll);margin-bottom:10px}
+.gt{font-family:var(--fd);font-size:clamp(20px,5vw,28px);font-weight:900;color:#fff;line-height:1.22;margin-bottom:5px}
+.gs{font-family:var(--fd);font-style:italic;font-size:14px;color:var(--or);margin-bottom:28px}
+.gl{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px;text-align:left}
+.gi{width:100%;padding:13px 18px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.16);border-radius:var(--rs);color:#fff;font-size:18px;font-family:var(--fb);letter-spacing:4px;text-align:center;transition:var(--ease);margin-bottom:8px}
+.gi:focus{outline:none;border-color:var(--tll);background:rgba(88,187,194,.1)}
+.ge{font-size:12px;color:#ff8fa3;min-height:18px;margin-bottom:10px}
+.gb{width:100%;padding:14px;background:linear-gradient(135deg,var(--tl),var(--tll));border:none;border-radius:var(--rs);color:#fff;font-size:15px;font-weight:600;transition:var(--ease)}
+.gb:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,124,163,.4)}
+.gn{margin-top:18px;font-size:11px;color:rgba(255,255,255,.28);line-height:1.6}
+
+/* ── APP ────────────────────────────────────────────────────────────────── */
+#app{display:none}
+#app.on{display:flex;flex-direction:column;min-height:100vh}
+
+/* ── TOPBAR ─────────────────────────────────────────────────────────────── */
+.topbar{background:var(--nvx);border-bottom:2px solid var(--tl);display:flex;align-items:center;padding:0 18px;gap:12px;position:sticky;top:0;z-index:100;height:58px;flex-shrink:0}
+.tbrand{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.tbhx{display:flex;gap:3px;align-items:center}
+.tbhx .hex{width:11px;height:13px}
+.tbhx .hex:nth-child(1){background:var(--tl)}
+.tbhx .hex:nth-child(2){background:var(--or);margin-top:-3px}
+.tbhx .hex:nth-child(3){background:var(--tll)}
+.tbname{font-family:var(--fd);font-size:13px;font-weight:700;color:#fff;white-space:nowrap}
+.tbname em{font-style:normal;color:var(--tll)}
+.pbw{flex:1;height:5px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+.pbf{height:100%;background:linear-gradient(90deg,var(--tl),var(--or));border-radius:3px;transition:width .5s cubic-bezier(.4,0,.2,1);width:0%}
+.pbl{font-size:11px;color:rgba(255,255,255,.4);white-space:nowrap;flex-shrink:0}
+.tbs{font-size:11px;color:var(--tll);opacity:0;transition:opacity .4s;white-space:nowrap;flex-shrink:0}
+.tbs.on{opacity:1}
+.tmb{display:none;background:transparent;border:1.5px solid rgba(255,255,255,.2);border-radius:6px;padding:5px 7px;flex-shrink:0}
+@media(max-width:768px){.tmb{display:block}}
+.tmb svg{display:block;width:18px;height:18px;fill:#fff}
+
+/* ── LAYOUT ─────────────────────────────────────────────────────────────── */
+.abody{display:flex;flex:1;min-height:0}
+.sidebar{background:#021e3a;border-right:1px solid rgba(255,255,255,.07);width:252px;flex-shrink:0;overflow-y:auto;position:sticky;top:58px;height:calc(100vh - 58px)}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+@media(max-width:768px){.sidebar{display:none;position:fixed;inset:58px 0 0 0;z-index:90;width:100%;height:auto}.sidebar.open{display:block}}
+.sbp{padding:16px 14px 5px;font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--tll);border-top:1px solid rgba(255,255,255,.06)}
+.sbp:first-child{border-top:none}
+.sbi{display:flex;align-items:center;gap:9px;padding:9px 14px;border:none;background:transparent;text-align:left;width:100%;cursor:pointer;border-left:3px solid transparent;transition:var(--ease)}
+.sbi:hover{background:rgba(255,255,255,.04)}
+.sbi.active{background:rgba(42,124,163,.16);border-left-color:var(--tll)}
+.sbd{width:7px;height:7px;border-radius:50%;border:1.5px solid rgba(255,255,255,.22);flex-shrink:0;transition:var(--ease)}
+.sbi.active .sbd,.sbi.done .sbd{background:var(--tll);border-color:var(--tll)}
+.sbt{font-size:12px;color:rgba(255,255,255,.55);line-height:1.3;transition:var(--ease)}
+.sbi.active .sbt,.sbi:hover .sbt,.sbi.done .sbt{color:rgba(255,255,255,.85)}
+
+.main{flex:1;overflow-y:auto;min-width:0}
+.main::-webkit-scrollbar{width:5px}
+.main::-webkit-scrollbar-thumb{background:rgba(6,70,128,.2);border-radius:3px}
+.inner{max-width:800px}
+
+/* ── SECTIONS ───────────────────────────────────────────────────────────── */
+.sec{display:none;animation:fu .3s ease}
+.sec.on{display:block}
+@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── HERO ───────────────────────────────────────────────────────────────── */
+.hero{padding:42px 42px 26px;border-bottom:1px solid rgba(6,70,128,.07);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:-80px;right:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(172,109,191,.07) 0%,transparent 70%);pointer-events:none}
+.htag{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--tl);margin-bottom:10px}
+.htag::before{content:'';width:18px;height:2px;background:var(--tl);border-radius:1px}
+.htit{font-family:var(--fd);font-size:clamp(24px,4vw,36px);font-weight:900;color:var(--nv);line-height:1.2;margin-bottom:8px}
+.hmeta{font-size:13px;color:var(--ts);display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.hmeta .dot{color:var(--or)}
+.htime{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--tl);background:var(--bgtl);padding:3px 10px;border-radius:20px;margin-top:4px}
+.htime::before{content:'⏱'}
+
+/* ── BODY ───────────────────────────────────────────────────────────────── */
+.bd{padding:30px 42px 50px}
+@media(max-width:600px){.hero{padding:28px 20px 20px}.bd{padding:22px 20px 40px}}
+p{margin-bottom:14px;font-size:15px;line-height:1.75;color:var(--tm)}
+p:last-child{margin-bottom:0}
+h2{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--nv);margin:30px 0 12px;display:flex;align-items:center;gap:10px}
+h2::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(42,124,163,.25),transparent)}
+h3{font-size:12.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--or);margin:22px 0 8px}
+
+/* ── CARDS ──────────────────────────────────────────────────────────────── */
+.card{background:#fff;border-radius:var(--r);border:1px solid rgba(6,70,128,.07);padding:20px 24px;margin:14px 0;box-shadow:var(--sh)}
+.cnv{background:var(--bgnv);border-left:4px solid var(--nv)}
+.ctl{background:var(--bgtl);border-left:4px solid var(--tl)}
+.cpu{background:var(--bgpu);border-left:4px solid var(--or)}
+.cgd{background:var(--bggd);border-left:4px solid var(--gd)}
+.clbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}
+.clbl.tl{color:var(--tl)}.clbl.nv{color:var(--nv)}.clbl.pu{color:var(--or)}.clbl.gd{color:var(--gd)}
+.ctit{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--nv);margin-bottom:7px}
+
+/* ── VIP NUDGE ──────────────────────────────────────────────────────────── */
+.vipn{display:flex;align-items:flex-start;gap:14px;background:linear-gradient(135deg,rgba(49,36,90,.05),rgba(172,109,191,.09));border:1px solid rgba(172,109,191,.28);border-radius:var(--r);padding:18px 22px;margin:28px 0}
+.vipn-ico{font-size:22px;flex-shrink:0;margin-top:1px}
+.vipn-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--uri);margin-bottom:5px}
+.vipn-txt{font-size:14px;color:var(--tm);line-height:1.65;margin-bottom:10px}
+.vipn-lnk{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:var(--uri);text-decoration:none;border-bottom:1px solid rgba(164,115,192,.3);padding-bottom:1px;transition:var(--ease)}
+.vipn-lnk:hover{color:var(--or);border-bottom-color:var(--or)}
+
+/* ── NIKKI LENS ─────────────────────────────────────────────────────────── */
+.lens{display:flex;gap:13px;background:var(--bgpu);border-radius:var(--r);border-left:4px solid var(--uri);padding:16px 20px;margin:16px 0}
+.lico{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--or),var(--uri));display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.llbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--uri);margin-bottom:5px}
+.ltxt{font-size:13.5px;font-style:italic;color:var(--tm);line-height:1.65;margin:0}
+
+/* ── ICEBREAKER ─────────────────────────────────────────────────────────── */
+.ice{background:var(--bggd);border:1.5px dashed var(--gd);border-radius:var(--r);padding:18px 22px;margin:16px 0}
+.ilbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gd);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.ilbl::before{content:'❄';font-size:13px}
+.itxt{font-size:14.5px;color:var(--tx);line-height:1.7;margin:0}
+.iprompt{font-family:var(--fd);font-style:italic;font-size:17px;color:var(--nv);margin-top:10px;line-height:1.5}
+
+/* ── VIDEO ──────────────────────────────────────────────────────────────── */
+.vid{margin:16px 0;background:var(--bgtl);border-radius:var(--r);border-left:4px solid var(--tl);overflow:hidden}
+.vh{padding:14px 18px 10px}
+.vlbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--tl);margin-bottom:5px}
+.vtit{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--nv)}
+.vnote{font-size:12.5px;color:var(--ts);margin-top:3px}
+.vf{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.vph{padding:34px 18px;text-align:center;color:var(--ts);font-size:13.5px}
+.vph .vpi{font-size:34px;display:block;margin-bottom:10px}
+
+/* ── TRACKS ─────────────────────────────────────────────────────────────── */
+.tracks{display:grid;gap:10px;margin:12px 0}
+.track{display:flex;align-items:flex-start;gap:13px;padding:15px 17px;border-radius:var(--r);border:2px solid transparent;background:#fff;cursor:pointer;transition:var(--ease);box-shadow:var(--sh)}
+.track:hover{border-color:var(--or);transform:translateY(-1px)}
+.track.sel{border-color:var(--nv);background:var(--bgnv)}
+.thx{width:38px;height:44px;flex-shrink:0;background:var(--nv);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;color:#fff;transition:var(--ease)}
+.track.sel .thx{background:var(--or)}
+.ti h4{font-size:14.5px;font-weight:700;color:var(--nv);margin-bottom:3px}
+.ti p{font-size:13px;color:var(--tm);margin:0;line-height:1.5}
+
+/* ── FIELDS ─────────────────────────────────────────────────────────────── */
+.field{margin:16px 0}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--nv);margin-bottom:7px;line-height:1.5}
+textarea{width:100%;padding:12px 14px;background:#fff;border:1.5px solid rgba(6,70,128,.14);border-left:4px solid var(--or);border-radius:var(--rs);font-family:var(--fb);font-size:14px;color:var(--tx);line-height:1.65;resize:vertical;min-height:86px;transition:var(--ease)}
+textarea:focus{outline:none;border-color:var(--tl);border-left-color:var(--tl);box-shadow:0 0 0 3px rgba(42,124,163,.07)}
+textarea::placeholder{color:rgba(46,38,80,.3);font-style:italic}
+.cc{font-size:11px;color:var(--ts);text-align:right;margin-top:3px;transition:color .2s}
+.cc.has{color:var(--tl)}
+
+/* ── QUIZ ───────────────────────────────────────────────────────────────── */
+.quiz{background:#fff;border-radius:var(--r);border:1px solid rgba(6,70,128,.07);overflow:hidden;margin:16px 0;box-shadow:var(--sh)}
+.qhd{background:#021e3a;padding:14px 18px;display:flex;align-items:flex-start;gap:12px}
+.qnum{width:30px;height:34px;flex-shrink:0;background:var(--tl);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
+.qq{font-family:var(--fd);font-size:15px;font-weight:700;color:#fff;line-height:1.4;padding-top:2px}
+.qopts{padding:13px 18px;display:grid;gap:7px}
+.opt{display:flex;align-items:center;gap:10px;padding:10px 13px;border-radius:var(--rs);background:var(--bgnv);cursor:pointer;border:1.5px solid transparent;transition:var(--ease)}
+.opt:hover{border-color:var(--tl);background:var(--bgtl)}
+.opt.right{background:#e8f5ee;border-color:#2e9b6a}
+.opt.wrong{background:#fdf0f0;border-color:#d96060}
+.opt.reveal{background:#e8f5ee;border-color:#2e9b6a}
+.olt{width:25px;height:25px;border-radius:50%;background:var(--nv);color:#fff;font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--ease)}
+.opt.right .olt,.opt.reveal .olt{background:#2e9b6a}
+.opt.wrong .olt{background:#d96060}
+.otxt{font-size:13.5px;color:var(--tm)}
+.qans{display:none;padding:13px 18px;background:#edfaf3;border-top:1px solid #c3e8d5}
+.qans.on{display:block}
+.qalbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#2e9b6a;margin-bottom:5px}
+.qans p{font-size:13px;color:#1a4a30;margin:0;line-height:1.6}
+
+/* ── CTA ────────────────────────────────────────────────────────────────── */
+.cta{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:var(--rs);background:linear-gradient(135deg,var(--tl),var(--tll));color:#fff;text-decoration:none;font-weight:600;font-size:13.5px;transition:var(--ease);margin:8px 0}
+.cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(42,124,163,.35)}
+.cta.pu{background:linear-gradient(135deg,var(--pu),var(--uri))}
+.cta.gd{background:linear-gradient(135deg,#c47e00,var(--gd))}
+
+/* ── PATHWAY CARDS ──────────────────────────────────────────────────────── */
+.pw{background:#fff;border-radius:var(--r);border:1px solid rgba(6,70,128,.07);padding:20px 24px;margin:12px 0;box-shadow:var(--sh);border-left:5px solid var(--nv)}
+.pw.gd{border-left-color:var(--gd)}.pw.tl{border-left-color:var(--tl)}.pw.pu{border-left-color:var(--uri)}
+.pwtag{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px}
+.pw.gd .pwtag{color:var(--gd)}.pw.tl .pwtag{color:var(--tl)}.pw.pu .pwtag{color:var(--uri)}
+.pw h3{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--nv);text-transform:none;letter-spacing:0;margin:3px 0 7px}
+
+/* ── CLOSING RITUAL ─────────────────────────────────────────────────────── */
+.ritual{background:linear-gradient(150deg,var(--nvx),var(--pu));border-radius:var(--r);padding:40px 36px;margin:32px 0;text-align:center;position:relative;overflow:hidden}
+.ritual::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(172,109,191,.18) 0%,transparent 70%);pointer-events:none}
+.ritual::after{content:'';position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(88,187,194,.12) 0%,transparent 70%);pointer-events:none}
+.ritual-hexes{display:flex;justify-content:center;gap:6px;margin-bottom:22px}
+.ritual-hexes .hex{width:14px;height:16px}
+.ritual-hexes .hex:nth-child(1){background:var(--tll);opacity:.7}
+.ritual-hexes .hex:nth-child(2){background:var(--or);opacity:.8}
+.ritual-hexes .hex:nth-child(3){background:var(--gd);opacity:.9}
+.ritual-hexes .hex:nth-child(4){background:var(--tl);opacity:.8}
+.ritual-hexes .hex:nth-child(5){background:var(--uri);opacity:.7}
+.ritual-line{font-family:var(--fd);font-style:italic;font-size:clamp(16px,2.5vw,19px);color:rgba(255,255,255,.82);line-height:1.6;margin-bottom:8px}
+.ritual-line.bold{font-style:normal;font-weight:700;font-size:clamp(18px,2.8vw,22px);color:#fff;margin:18px 0 8px}
+.ritual-sig{font-size:13px;color:var(--tll);margin-top:18px;font-style:italic}
+
+/* ── PRINT BUTTON ───────────────────────────────────────────────────────── */
+.print-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:var(--rs);background:var(--bgnv);border:1.5px solid rgba(6,70,128,.2);color:var(--nv);font-size:14px;font-weight:600;cursor:pointer;transition:var(--ease);margin-top:8px}
+.print-btn:hover{background:var(--nv);color:#fff;border-color:var(--nv)}
+.print-btn svg{width:16px;height:16px;flex-shrink:0}
+
+/* ── NAV BUTTONS ────────────────────────────────────────────────────────── */
+.snav{display:flex;gap:10px;margin-top:32px;padding-top:22px;border-top:1px solid rgba(6,70,128,.07)}
+.bprev,.bnext{padding:10px 20px;border-radius:var(--rs);font-size:13.5px;font-weight:600;border:none;transition:var(--ease);display:flex;align-items:center;gap:6px}
+.bprev{background:var(--bgnv);color:var(--nv)}
+.bprev:hover{background:var(--nv);color:#fff}
+.bnext{background:var(--nv);color:#fff;margin-left:auto}
+.bnext:hover{background:var(--tl);transform:translateY(-1px);box-shadow:0 4px 16px rgba(42,124,163,.3)}
+
+/* ── COVER ──────────────────────────────────────────────────────────────── */
+.cvhero{background:linear-gradient(160deg,var(--nvx) 0%,var(--pu) 100%);padding:50px 42px 46px;position:relative;overflow:hidden}
+.cvhexbg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cvhexbg svg{position:absolute;inset:0;width:100%;height:100%}
+.cvo{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--tll);margin-bottom:13px}
+.cvt{font-family:var(--fd);font-size:clamp(28px,5vw,44px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:7px}
+.cvs{font-family:var(--fd);font-style:italic;font-size:clamp(16px,2.5vw,20px);color:var(--or);margin-bottom:22px}
+.cvd{width:70px;height:3px;background:var(--gd);border-radius:2px;margin-bottom:22px}
+.cvbl{font-size:13.5px;color:rgba(255,255,255,.65)}
+.cvbl strong{color:rgba(255,255,255,.9)}
+.cvpts{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:26px}
+@media(max-width:480px){.cvpts{grid-template-columns:1fr}}
+.cvpt{background:rgba(255,255,255,.07);border-radius:var(--rs);padding:14px 16px;border-top:3px solid var(--tl)}
+.cvpt:last-child{border-top-color:var(--or)}
+.cpn{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--tll);margin-bottom:4px}
+.cvpt:last-child .cpn{color:var(--or)}
+.cpt{font-size:13.5px;font-weight:600;color:#fff;line-height:1.4}
+
+/* ── PART 2 DIVIDER ─────────────────────────────────────────────────────── */
+.pdiv{background:linear-gradient(150deg,var(--nvx),var(--nvd));padding:50px 42px;position:relative;overflow:hidden}
+.pdhb{position:absolute;inset:0;pointer-events:none}
+.pdhb svg{position:absolute;inset:0;width:100%;height:100%}
+.pdtag{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--tll);margin-bottom:12px}
+.pdr{width:55px;height:2.5px;background:var(--gd);border-radius:1px;margin:10px 0 16px}
+.pdt{font-family:var(--fd);font-size:clamp(26px,4vw,38px);font-weight:900;color:#fff;line-height:1.2;margin-bottom:6px}
+.pds{font-family:var(--fd);font-style:italic;font-size:15px;color:var(--or);margin-bottom:16px}
+.pdn{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* ── PRINT STYLES ───────────────────────────────────────────────────────── */
+@media print{
+  #gate,#app .topbar,.abody .sidebar,.snav,.print-btn{display:none!important}
+  .abody{display:block}
+  .main{overflow:visible}
+  .inner{max-width:100%}
+  .sec{display:block!important;page-break-after:always}
+  .hero{padding:20px 24px 14px}
+  .bd{padding:16px 24px 24px}
+  body{background:#fff;font-size:13px}
+  textarea{border:1px solid #ccc;border-left:3px solid #ac6dbf;min-height:60px;font-size:12px}
+  .vf,.vid iframe{display:none}
+  .vid .vnote::after{content:' [Video — see nikkicates.github.io/reset]';font-style:italic;color:#666}
+  h2{font-size:16px}
+  .ritual{background:#064680!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ GATE ═══════════════════════════════════════════════════════════════ -->
+<div id="gate">
+  <div class="gc">
+    <div class="ghx"><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div></div>
+    <div class="go">Strategic Transformations · URI</div>
+    <div class="gt">The Strategic Reset Intensive</div>
+    <div class="gs">From Executor to Strategic Architect</div>
+    <div class="gl">Enter your cohort password</div>
+    <input class="gi" type="password" id="pwd" placeholder="· · · · · ·" autocomplete="off" maxlength="30">
+    <div class="ge" id="gerr"></div>
+    <button class="gb" onclick="checkPwd()">Enter the Room →</button>
+    <div class="gn">Password provided in your confirmation email.<br>Your responses save automatically as you type.</div>
+  </div>
+</div>
+
+<!-- ═══ APP ════════════════════════════════════════════════════════════════ -->
+<div id="app">
+
+  <div class="topbar">
+    <div class="tbrand">
+      <div class="tbhx"><div class="hex"></div><div class="hex"></div><div class="hex"></div></div>
+      <div class="tbname">Strategic <em>Reset</em></div>
+    </div>
+    <div class="pbw"><div class="pbf" id="pb"></div></div>
+    <div class="pbl" id="pbl">0 / 14</div>
+    <div class="tbs" id="sv">✓ Saved</div>
+    <button class="tmb" onclick="toggleSB()" aria-label="Menu">
+      <svg viewBox="0 0 20 20"><rect y="3" width="20" height="2" rx="1"/><rect y="9" width="20" height="2" rx="1"/><rect y="15" width="20" height="2" rx="1"/></svg>
+    </button>
+  </div>
+
+  <div class="abody">
+    <nav class="sidebar" id="sb">
+      <div class="sbp">Getting Started</div>
+      <button class="sbi" onclick="go(0)"><div class="sbd"></div><div class="sbt">Welcome</div></button>
+      <button class="sbi" onclick="go(1)"><div class="sbd"></div><div class="sbt">Introduction</div></button>
+      <button class="sbi" onclick="go(2)"><div class="sbd"></div><div class="sbt">Watch First</div></button>
+      <button class="sbi" onclick="go(3)"><div class="sbd"></div><div class="sbt">Pre-Session Work</div></button>
+      <div class="sbp">Part One — Sessions</div>
+      <button class="sbi" onclick="go(4)"><div class="sbd"></div><div class="sbt">Session 1: Name the Strain</div></button>
+      <button class="sbi" onclick="go(5)"><div class="sbd"></div><div class="sbt">Between Sessions</div></button>
+      <button class="sbi" onclick="go(6)"><div class="sbd"></div><div class="sbt">Session 2: Build the Reset</div></button>
+      <button class="sbi" onclick="go(7)"><div class="sbd"></div><div class="sbt">After the Room</div></button>
+      <button class="sbi" onclick="go(8)"><div class="sbd"></div><div class="sbt">Knowledge Check</div></button>
+      <div class="sbp">Part Two — The Manual</div>
+      <button class="sbi" onclick="go(9)"><div class="sbd"></div><div class="sbt">Part Two Overview</div></button>
+      <button class="sbi" onclick="go(10)"><div class="sbd"></div><div class="sbt">Ch. 1–2: Load + Masking</div></button>
+      <button class="sbi" onclick="go(11)"><div class="sbd"></div><div class="sbt">Ch. 3–4: Overload + Authority</div></button>
+      <button class="sbi" onclick="go(12)"><div class="sbd"></div><div class="sbt">Ch. 5–6: Rest + Architecture</div></button>
+      <div class="sbp">Next Steps</div>
+      <button class="sbi" onclick="go(13)"><div class="sbd"></div><div class="sbt">Go Deeper</div></button>
+    </nav>
+
+    <main class="main" id="main">
+    <div class="inner">
+
+      <!-- ═══ S0: WELCOME ══════════════════════════════════════════════════ -->
+      <div class="sec on" id="s0">
+        <div class="cvhero">
+          <div class="cvhexbg"><svg viewBox="0 0 800 380" preserveAspectRatio="xMidYMid slice">
+            <polygon points="680,20 720,42 720,86 680,108 640,86 640,42" fill="none" stroke="rgba(88,187,194,.18)" stroke-width="1.5"/>
+            <polygon points="720,70 760,92 760,136 720,158 680,136 680,92" fill="none" stroke="rgba(172,109,191,.15)" stroke-width="1.5"/>
+            <polygon points="740,150 780,172 780,216 740,238 700,216 700,172" fill="rgba(88,187,194,.06)" stroke="rgba(88,187,194,.2)" stroke-width="1"/>
+            <polygon points="40,270 80,292 80,336 40,358 0,336 0,292" fill="none" stroke="rgba(172,109,191,.15)" stroke-width="1.5"/>
+            <polygon points="80,230 120,252 120,296 80,318 40,296 40,252" fill="rgba(172,109,191,.05)" stroke="rgba(172,109,191,.18)" stroke-width="1"/>
+          </svg></div>
+          <div class="cvo">Strategic Transformations · Unbothered Resistance International</div>
+          <div class="cvt">The Strategic Reset<br>Intensive</div>
+          <div class="cvs">From Executor to Strategic Architect</div>
+          <div class="cvd"></div>
+          <div class="cvbl">Participant Workbook · Facilitated by <strong>Nikki Cates</strong> + <strong>Char Johnson</strong></div>
+          <div class="cvpts">
+            <div class="cvpt"><div class="cpn">Part One</div><div class="cpt">The Session Workbook</div></div>
+            <div class="cvpt"><div class="cpn">Part Two</div><div class="cpt">Walking Through the Manual</div></div>
+          </div>
+        </div>
+        <div class="bd">
+          <h2>A Letter from Nikki</h2>
+          <p>You showed up. That matters more than you know.</p>
+          <p>This is not a productivity workshop. It is not about getting more done or learning the right prompts. This is about naming what has actually been happening to you and deciding that you are no longer willing to absorb it alone.</p>
+          <p>If you are here, you are probably already exhausted. You are probably carrying more than your title accounts for. That is not a personal failure. That is a structural one. And the difference between those two things is everything.</p>
+          <p>Come as you are. Bring the honest version.</p>
+          <p style="margin-top:16px"><strong style="color:var(--nv)">Nikki Cates</strong><br><em style="color:var(--tl);font-size:13px">Founder, Strategic Transformations | URI</em></p>
+
+          <h2>What Comes With This Workbook</h2>
+          <p>Your digital copy of <strong>Volume 1 of the UNMASK Blueprint Series</strong> — <em>Deconstruction of the Grind</em> — is included with your enrollment. Open it alongside Part Two of this workbook.</p>
+          <a class="cta" href="https://assets.cdn.filesafe.space/35XiTsvy0Kt7TRNBabas/media/69d9383401157e64b3cabb23.pdf" target="_blank" rel="noopener">
+            Open Volume 1: Deconstruction of the Grind →
+          </a>
+
+          <h2>How to Use This Workbook</h2>
+          <p>Move through it using the sidebar or the buttons at the bottom of each section. Every response field saves automatically to your browser as you type. You can close the tab and return — your work will still be here.</p>
+          <div class="snav"><button class="bnext" onclick="go(1)">Introduction →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S1: INTRODUCTION ══════════════════════════════════════════════ -->
+      <div class="sec" id="s1">
+        <div class="hero">
+          <div class="htag">Introduction</div>
+          <div class="htit">What Is Actually Happening</div>
+          <div class="htime">5 min read</div>
+        </div>
+        <div class="bd">
+          <p>You were promised that AI would free you. For a lot of us, that is not what happened.</p>
+          <p>Instead, the tools arrived and the work multiplied. The device is always present, which means you are always reachable, which means work never fully stops. There is a name for this: <strong>Ambient Work</strong>. It bleeds into your evenings and weekends not because you are bad at boundaries, but because the system was designed without them.</p>
+          <p>On top of that, many of us have become the unofficial quality control layer for everyone else's half-finished automation. You verify. You translate. You clean it up. That is called <strong>Workslop</strong>, and the cognitive drain of managing it has a name too: <strong>#AIBrainFry</strong>.</p>
+          <div class="card ctl">
+            <div class="clbl tl">Three Terms Worth Knowing</div>
+            <p><strong style="color:var(--tl)">Ambient Work</strong> — Work that bleeds into your off-hours because the device and the expectation of availability never stop.</p>
+            <p><strong style="color:var(--nv)">Workslop</strong> — Low-quality machine-generated output that lands on your desk to be fixed. You did not create the mess. You are expected to clean it up.</p>
+            <p style="margin:0"><strong style="color:var(--or)">#AIBrainFry</strong> — The chronic cognitive exhaustion of verifying, translating, and masking machine output on top of your actual responsibilities.</p>
+          </div>
+          <p>For BIWOC navigating professional environments, there is an additional layer. There is a cost to editing your voice, your presence, your way of communicating so it lands safely in spaces that were not built for you. That cost is real, measurable, and it accumulates.</p>
+          <p><strong>Structural Sovereignty</strong> is what happens when you stop absorbing a broken structure and start designing your professional life around your actual capacity, your actual authority, and your actual voice. That is what this intensive is for.</p>
+          <div class="snav"><button class="bprev" onclick="go(0)">← Back</button><button class="bnext" onclick="go(2)">Watch First →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S2: WELCOME VIDEO ═════════════════════════════════════════════ -->
+      <div class="sec" id="s2">
+        <div class="hero">
+          <div class="htag">Before You Begin</div>
+          <div class="htit">Watch First</div>
+          <div class="htime">~5 min</div>
+        </div>
+        <div class="bd">
+          <p>Before moving into the Pre-Session work, take a few minutes with this. Let it land.</p>
+          <div class="vid">
+            <div class="vh"><div class="vlbl">▶ Welcome Video</div><div class="vtit">Welcome to the Strategic Reset</div><div class="vnote">A message from Nikki before we begin.</div></div>
+            <div class="vph"><span class="vpi">🎬</span>Welcome video coming soon — the link will be added here before your session.</div>
+          </div>
+          <div class="snav"><button class="bprev" onclick="go(1)">← Introduction</button><button class="bnext" onclick="go(3)">Pre-Session Work →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S3: PRE-SESSION ═══════════════════════════════════════════════ -->
+      <div class="sec" id="s3">
+        <div class="hero">
+          <div class="htag">Pre-Session</div>
+          <div class="htit">Before We Begin</div>
+          <div class="hmeta"><span>Complete before Session 1</span></div>
+          <div class="htime">~20 minutes</div>
+        </div>
+        <div class="bd">
+          <p>Complete this section before Session 1. There are no right answers — only what is actually true for you.</p>
+
+          <h2>Step 1: Intake Form</h2>
+          <p>The Pre-Session Intake gives our facilitation team context before we enter the room together.</p>
+          <a class="cta" href="https://form.typeform.com/to/E62AKKyt" target="_blank" rel="noopener">Complete the Pre-Session Intake →</a>
+
+          <h2>Step 2: The Pulse Check</h2>
+          <div class="field"><label for="pulse">If your current workload or relationship with technology were a weather report, what would it say right now?</label><textarea id="pulse" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-pulse">0 characters</div></div>
+
+          <h2>Step 3: Choose Your Track</h2>
+          <p>Choose the one that most accurately reflects where you are right now. If you feel between two, choose the one that is most pressing today.</p>
+          <div class="tracks" id="trk">
+            <div class="track hex" data-track="leader" onclick="selTrack(this)"><div class="thx hex">L</div><div class="ti"><h4>The Leader</h4><p>Navigating invisible labor, managing others' AI output, and holding up systems not designed to hold you up in return.</p></div></div>
+            <div class="track hex" data-track="jobseeker" onclick="selTrack(this)"><div class="thx hex">J</div><div class="ti"><h4>The Job-Seeker</h4><p>Navigating a volatile labor market, ATS algorithms, and a hiring process not designed with your full humanity in mind.</p></div></div>
+            <div class="track hex" data-track="founder" onclick="selTrack(this)"><div class="thx hex">F</div><div class="ti"><h4>The Founder</h4><p>Managing a business under the cultural pressure to hustle harder. The scale gap is real. The emotional labor of running a company in your body is real.</p></div></div>
+          </div>
+          <div class="field"><label for="twhy">I am choosing this track because:</label><textarea id="twhy" rows="3" placeholder="Be specific..."></textarea><div class="cc" id="cc-twhy">0 characters</div></div>
+
+          <h2>Step 4: The Grounding Question</h2>
+          <div class="card cnv"><div class="clbl nv">What Is a Load-Bearing Wall?</div><p style="margin:0">In a building, a load-bearing wall holds up everything above it. When we say BIWOC professionals are positioned as load-bearing walls, we mean this: you have been placed in a role where you hold up the system and absorb its weight, not because you were resourced to do it, but because the system learned it could lean on you. The question for this intensive is not how to bear the load better. It is how to stop being the wall.</p></div>
+          <div class="field"><label for="lbw">What would it mean to you, personally, to stop being the load-bearing wall? Write the honest answer, not the aspirational one.</label><textarea id="lbw" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-lbw">0 characters</div></div>
+          <div class="snav"><button class="bprev" onclick="go(2)">← Back</button><button class="bnext" onclick="go(4)">Session 1 →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S4: SESSION 1 ═════════════════════════════════════════════════ -->
+      <div class="sec" id="s4">
+        <div class="hero">
+          <div class="htag">Part One · Session 1</div>
+          <div class="htit">Name the Strain</div>
+          <div class="hmeta"><span>Lead: <strong>Nikki Cates</strong></span><span class="dot">·</span><span>90 minutes live</span></div>
+          <div class="htime">Fill in during and after Session 1</div>
+        </div>
+        <div class="bd">
+          <p>This session is about naming what is structurally true. We are not problem-solving yet. We are calling things by their real names.</p>
+
+          <div class="card cgd"><div class="clbl gd">Complete Before Session 1 Begins</div><div class="ctit">Structural Strain Score</div><p>The SSS helps you surface where your professional weight is actually coming from. Complete it before Session 1 so we can move into the live work with more precision.</p><a class="cta" href="https://form.typeform.com/to/eo5W8Zio" target="_blank" rel="noopener">Take the Structural Strain Score →</a></div>
+
+          <div class="ice"><div class="ilbl">Icebreaker</div><div class="itxt">Before we begin, finish this sentence in the chat or out loud:</div><div class="iprompt">"Right now, my nervous system feels like ___________."</div><div class="itxt" style="margin-top:8px;font-size:13px;color:var(--ts)">No explanation needed. Just the image.</div></div>
+
+          <h2>1.1 What Is This Season Actually Costing You?</h2>
+          <div class="field"><label for="s1a">When you are honest with yourself, what part of your work right now is costing you the most? Not the part you explain to people — the part you carry privately.</label><textarea id="s1a" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-s1a">0 characters</div></div>
+          <div class="field"><label for="s1b">What has your body been trying to tell you that you have been overriding? Think: sleep, tension, the moment before you open your laptop, Sunday evenings.</label><textarea id="s1b" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-s1b">0 characters</div></div>
+          <div class="field"><label for="s1c">If the invisible labor you do in a week had to be written on a receipt, what would be on it?</label><textarea id="s1c" rows="4" placeholder="Name the things that take energy but never get acknowledged..."></textarea><div class="cc" id="cc-s1c">0 characters</div></div>
+
+          <h2>1.2 The Crooked Room</h2>
+          <div class="card cpu"><div class="clbl pu">What Is the Crooked Room?</div><p style="margin:0">The Crooked Room describes what it is like to navigate an environment where the floor is tilted against you. For BIWOC professionals, this is not a metaphor. The extra work of translation, visibility management, and performing competence in rooms that were not designed to receive you fully is a real and unmeasured cognitive expense.</p></div>
+          <div class="field"><label for="s1d">Where do you spend the most energy managing how you are perceived rather than simply doing your work?</label><textarea id="s1d" rows="5" placeholder="Be as specific as you can..."></textarea><div class="cc" id="cc-s1d">0 characters</div></div>
+          <div class="field"><label for="s1e">Is there a version of yourself that only shows up when you are not at work? What does she know that the professional version has learned to quiet?</label><textarea id="s1e" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-s1e">0 characters</div></div>
+
+          <h2>1.3 Where Is Your Load Actually Coming From?</h2>
+          <p>Write quickly and honestly. You do not need complete sentences.</p>
+          <div class="field"><label for="s1f">Responsibilities I carry that I do not have full authority to manage:</label><textarea id="s1f" rows="4" placeholder="Name them directly..."></textarea><div class="cc" id="cc-s1f">0 characters</div></div>
+          <div class="field"><label for="s1g">Labor that no one has named, quantified, or compensated me for:</label><textarea id="s1g" rows="4" placeholder="Name them directly..."></textarea><div class="cc" id="cc-s1g">0 characters</div></div>
+          <div class="field"><label for="s1h">Things I am expected to produce, fix, or clean up that were not created with my involvement:</label><textarea id="s1h" rows="4" placeholder="Name them directly..."></textarea><div class="cc" id="cc-s1h">0 characters</div></div>
+
+          <h2>1.4 What the Spirit Knows</h2>
+          <p>Most of us have a place inside ourselves that knows things before our minds catch up. A sense. A knowing. Call it what is true for you.</p>
+          <div class="field"><label for="s1i">What has that deeper part of you been saying about your current season that you have not yet given yourself permission to fully hear?</label><textarea id="s1i" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-s1i">0 characters</div></div>
+          <div class="field"><label for="s1j">If you were fully held right now — not performing, not managing, not proving — what would you ask for?</label><textarea id="s1j" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-s1j">0 characters</div></div>
+          <div class="lens"><div class="lico">👁</div><div><div class="llbl">Nikki's Lens</div><p class="ltxt">In my work with BIWOC professionals, I have noticed that the spiritual and somatic signals are usually the most accurate ones. The body keeps the real record. What people say last is usually what was most true first.</p></div></div>
+
+          <h2>1.5 Your Reset Thesis — First Draft</h2>
+          <div class="card cpu"><div class="clbl pu">Complete This Sentence</div><p style="font-family:var(--fd);font-style:italic;font-size:17px;color:var(--nv);margin:0">"To begin moving from where I am to where I belong, the first thing I need to stop pretending is..."</p></div>
+          <div class="field"><label for="s1k">Write your first draft here. Do not edit it. Do not make it sound good. Just write what comes.</label><textarea id="s1k" rows="6" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-s1k">0 characters</div></div>
+          <div class="lens"><div class="lico">👁</div><div><div class="llbl">Nikki's Lens</div><p class="ltxt">The most important reset thesis is usually the one someone almost did not say. The hesitation before the honest version is worth noticing.</p></div></div>
+
+          <!-- VIP NUDGE 1: After Reset Thesis -->
+          <div class="vipn">
+            <div class="vipn-ico">✦</div>
+            <div>
+              <div class="vipn-lbl">Something Just Surfaced</div>
+              <p class="vipn-txt">What you just wrote deserves more than a group session can hold. The VIP Add-On is a dedicated 75–90 minute session with Nikki and Char, built specifically for the woman who needs to go deeper with her thesis.</p>
+              <a class="vipn-lnk" href="mailto:nikki@strategicunmasking.com?subject=VIP Add-On Inquiry">Ask about the VIP Add-On →</a>
+            </div>
+          </div>
+
+          <div class="snav"><button class="bprev" onclick="go(3)">← Pre-Session</button><button class="bnext" onclick="go(5)">Between Sessions →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S5: BETWEEN SESSIONS ══════════════════════════════════════════ -->
+      <div class="sec" id="s5">
+        <div class="hero">
+          <div class="htag">Between Sessions</div>
+          <div class="htit">Your Reflection Bridge</div>
+          <div class="htime">~15 minutes, any time before Session 2</div>
+        </div>
+        <div class="bd">
+          <p>Session 2 is in a few days. Use this time to let Session 1 settle. You do not need to solve anything. You need to notice.</p>
+
+          <div class="vid">
+            <div class="vh"><div class="vlbl">▶ Watch Between Sessions</div><div class="vtit">Escaping the Digital Mess: A Guide to Structural AI Boundaries</div><div class="vnote">Watch this before Session 2. Let it inform your thinking on AI sovereignty.</div></div>
+            <div class="vf"><iframe src="https://www.youtube.com/embed/nagUcUQ81Bc" title="Escaping the Digital Mess" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          </div>
+
+          <div class="field"><label for="b1">What is your single biggest drain right now? The one thing, if it were reduced or removed, that would change how this season feels.</label><textarea id="b1" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-b1">0 characters</div></div>
+          <div class="field"><label for="b2">Where is technology helping you right now? Where is it making things harder or heavier?</label><textarea id="b2" rows="4" placeholder="Be specific..."></textarea><div class="cc" id="cc-b2">0 characters</div></div>
+          <div class="field"><label for="b3">What is one thing you want to stop carrying into Session 2? Name it here so it is not just in your body.</label><textarea id="b3" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-b3">0 characters</div></div>
+          <div class="field"><label for="b4">Is there anything that surfaced in Session 1 that you have not fully said yet? This space is for that.</label><textarea id="b4" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-b4">0 characters</div></div>
+
+          <!-- VIP NUDGE 2: Between sessions, momentum moment -->
+          <div class="vipn">
+            <div class="vipn-ico">✦</div>
+            <div>
+              <div class="vipn-lbl">If You Are Finding You Want More</div>
+              <p class="vipn-txt">The group container holds a lot. But some of what is coming up for you may need more room than the group can give it. The VIP session is designed for exactly that — a dedicated conversation with both Nikki and Char before you move into implementation.</p>
+              <a class="vipn-lnk" href="mailto:nikki@strategicunmasking.com?subject=VIP Add-On Inquiry">Ask about the VIP Add-On →</a>
+            </div>
+          </div>
+
+          <div class="snav"><button class="bprev" onclick="go(4)">← Session 1</button><button class="bnext" onclick="go(6)">Session 2 →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S6: SESSION 2 ══════════════════════════════════════════════════ -->
+      <div class="sec" id="s6">
+        <div class="hero">
+          <div class="htag">Part One · Session 2</div>
+          <div class="htit">Build the Reset</div>
+          <div class="hmeta"><span>Lead: <strong>Nikki Cates + Char Johnson</strong></span><span class="dot">·</span><span>90 minutes live</span></div>
+          <div class="htime">Fill in during and after Session 2</div>
+        </div>
+        <div class="bd">
+          <p>Session 1 was about naming. Session 2 is about beginning to move.</p>
+
+          <div class="ice"><div class="ilbl">Icebreaker</div><div class="itxt">Share one word or one sentence in the chat:</div><div class="iprompt">"If my work this week had a weather report, it would say ___________."</div><div class="itxt" style="margin-top:8px;font-size:13px;color:var(--ts)">We are not explaining. We are just checking in honestly.</div></div>
+
+          <h2>2.1 Nikki: What Gets Reclaimed First</h2>
+          <div class="field"><label for="s2a">Looking at your load from Session 1, what is the one thing you are most ready to stop absorbing right now? Not the hardest thing — the readiest one.</label><textarea id="s2a" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-s2a">0 characters</div></div>
+          <div class="field"><label for="s2b">What does a week look like when you are operating closer to your actual capacity?</label><textarea id="s2b" rows="5" placeholder="Be specific — days, rhythms, what is present and what is absent..."></textarea><div class="cc" id="cc-s2b">0 characters</div></div>
+          <div class="field"><label for="s2c">What boundary, if you held it consistently for the next 30 days, would create the most structural relief?</label><textarea id="s2c" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-s2c">0 characters</div></div>
+          <div class="lens"><div class="lico">👁</div><div><div class="llbl">Nikki's Lens</div><p class="ltxt">When I am working with someone at this stage, I often observe them choosing a boundary that is slightly safer than the one they actually need. The second answer is usually more accurate than the first.</p></div></div>
+
+          <h2>2.2 Char Johnson: AI + Automation for Real Life and Work</h2>
+          <div class="card cpu"><div class="clbl pu">Char's Section</div><p>At this point in Session 2, Char takes over. Her AI and Automation workbook is your companion for this half of the session. You will receive it as a separate document at the start of Session 2.</p><p style="margin:0;font-style:italic;color:var(--ts);font-size:13.5px">Char's workbook link will be added here once available.</p></div>
+
+          <h2>2.3 Your 30-Day Commitments</h2>
+          <p>These are not goals. They are decisions. Keep them small enough to actually honor.</p>
+          <div class="field"><label for="s2d">One thing I am stopping in the next 30 days:</label><textarea id="s2d" rows="3" placeholder="Be specific and concrete..."></textarea><div class="cc" id="cc-s2d">0 characters</div></div>
+          <div class="field"><label for="s2e">One thing I am stabilizing (protecting or holding steady) in the next 30 days:</label><textarea id="s2e" rows="3" placeholder="Be specific and concrete..."></textarea><div class="cc" id="cc-s2e">0 characters</div></div>
+          <div class="field"><label for="s2f">One thing I am testing (trying something new or different) in the next 30 days:</label><textarea id="s2f" rows="3" placeholder="Be specific and concrete..."></textarea><div class="cc" id="cc-s2f">0 characters</div></div>
+
+          <div class="snav"><button class="bprev" onclick="go(5)">← Between Sessions</button><button class="bnext" onclick="go(7)">After the Room →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S7: POST-SESSION ═══════════════════════════════════════════════ -->
+      <div class="sec" id="s7">
+        <div class="hero">
+          <div class="htag">Post-Session</div>
+          <div class="htit">After the Room</div>
+          <div class="htime">~20 minutes, within 48 hours of Session 2</div>
+        </div>
+        <div class="bd">
+          <p>Let yourself be still with this for a moment. The intensive is over. The work is not finished. That is how it is supposed to be.</p>
+
+          <div class="field"><label for="p1">What shifted for you across these two sessions? Not what you learned — what shifted.</label><textarea id="p1" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-p1">0 characters</div></div>
+          <div class="field"><label for="p2">What did you hear — in the sessions or in yourself — that you still need to sit with?</label><textarea id="p2" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-p2">0 characters</div></div>
+          <div class="field"><label for="p3">What is the one structural truth you are carrying out of this intensive?</label><textarea id="p3" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-p3">0 characters</div></div>
+          <div class="field"><label for="p4">Based on where you are right now, what does the support you actually need look like? Be honest, not modest.</label><textarea id="p4" rows="5" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-p4">0 characters</div></div>
+
+          <!-- VIP NUDGE 3: Post-session, invitation moment -->
+          <div class="vipn">
+            <div class="vipn-ico">✦</div>
+            <div>
+              <div class="vipn-lbl">If What Came Up Deserves Its Own Conversation</div>
+              <p class="vipn-txt">Two sessions can open a door. The VIP Add-On is where you walk through it — with both Nikki and Char, dedicated entirely to your situation. If what surfaced here feels bigger than the group container could hold, that is the signal.</p>
+              <a class="vipn-lnk" href="mailto:nikki@strategicunmasking.com?subject=VIP Add-On Inquiry">Ask about the VIP Add-On →</a>
+            </div>
+          </div>
+
+          <div class="snav"><button class="bprev" onclick="go(6)">← Session 2</button><button class="bnext" onclick="go(8)">Knowledge Check →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S8: QUIZ ════════════════════════════════════════════════════════ -->
+      <div class="sec" id="s8">
+        <div class="hero">
+          <div class="htag">Knowledge Check</div>
+          <div class="htit">Reflect and Verify</div>
+          <div class="htime">~10 minutes</div>
+        </div>
+        <div class="bd">
+          <p>Two questions check what landed from the Introduction and the sessions. The third asks you to apply it to yourself.</p>
+
+          <div class="quiz" id="q1"><div class="qhd"><div class="qnum hex">Q1</div><div class="qq">How does the UNMASK framework view burnout?</div></div><div class="qopts"><div class="opt" onclick="ans(this,'q1','A','B')"><div class="olt">A</div><div class="otxt">A lack of personal resilience.</div></div><div class="opt" onclick="ans(this,'q1','B','B')"><div class="olt">B</div><div class="otxt">A structural system failure.</div></div><div class="opt" onclick="ans(this,'q1','C','B')"><div class="olt">C</div><div class="otxt">A sign to practice self-care.</div></div><div class="opt" onclick="ans(this,'q1','D','B')"><div class="olt">D</div><div class="otxt">An unavoidable career phase.</div></div></div><div class="qans" id="qa1"><div class="qalbl">✓ Correct Answer: B</div><p>UNMASK treats burnout as a system failure and a mismatch of authority, not a personal failing.</p></div></div>
+
+          <div class="quiz" id="q2"><div class="qhd"><div class="qnum hex">Q2</div><div class="qq">What describes the AI Efficiency Paradox?</div></div><div class="qopts"><div class="opt" onclick="ans(this,'q2','A','C')"><div class="olt">A</div><div class="otxt">AI tools are too expensive.</div></div><div class="opt" onclick="ans(this,'q2','B','C')"><div class="olt">B</div><div class="otxt">AI models slow down over time.</div></div><div class="opt" onclick="ans(this,'q2','C','C')"><div class="olt">C</div><div class="otxt">AI creates invisible cognitive drag.</div></div><div class="opt" onclick="ans(this,'q2','D','C')"><div class="olt">D</div><div class="otxt">AI removes the need for human judgment.</div></div></div><div class="qans" id="qa2"><div class="qalbl">✓ Correct Answer: C</div><p>Technology promises liberation but often transfers invisible strain to leaders who must constantly verify the output.</p></div></div>
+
+          <div class="quiz" id="q3"><div class="qhd"><div class="qnum hex">Q3</div><div class="qq">What is a strict rule for AI data privacy?</div></div><div class="qopts"><div class="opt" onclick="ans(this,'q3','A','C')"><div class="olt">A</div><div class="otxt">Upload your company's strategy.</div></div><div class="opt" onclick="ans(this,'q3','B','C')"><div class="olt">B</div><div class="otxt">Share your AI login with your team.</div></div><div class="opt" onclick="ans(this,'q3','C','C')"><div class="olt">C</div><div class="otxt">Never input sensitive or personal data.</div></div><div class="opt" onclick="ans(this,'q3','D','C')"><div class="olt">D</div><div class="otxt">Let AI write your personal vents.</div></div></div><div class="qans" id="qa3"><div class="qalbl">✓ Correct Answer: C</div><p>Never input proprietary financials, employee data, or use tools to vent personal frustrations.</p></div></div>
+
+          <h3>Reflection Question</h3>
+          <div class="field"><label for="qr">Which concept hit closest to your own experience this week? What did it surface for you?</label><textarea id="qr" rows="5" placeholder="No right answer. Just yours."></textarea><div class="cc" id="cc-qr">0 characters</div></div>
+          <div class="snav"><button class="bprev" onclick="go(7)">← After the Room</button><button class="bnext" onclick="go(9)">Part Two →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S9: PART TWO DIVIDER ════════════════════════════════════════════ -->
+      <div class="sec" id="s9">
+        <div class="pdiv">
+          <div class="pdhb"><svg viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice">
+            <polygon points="560,40 600,62 600,106 560,128 520,106 520,62" fill="none" stroke="rgba(42,124,163,.22)" stroke-width="1.5"/>
+            <polygon points="620,100 660,122 660,166 620,188 580,166 580,122" fill="none" stroke="rgba(88,187,194,.18)" stroke-width="1.5"/>
+            <polygon points="680,50 720,72 720,116 680,138 640,116 640,72" fill="rgba(42,124,163,.06)" stroke="rgba(42,124,163,.2)" stroke-width="1"/>
+            <line x1="600" y1="62" x2="620" y2="122" stroke="rgba(42,124,163,.15)" stroke-width="1"/>
+            <line x1="660" y1="122" x2="680" y2="72" stroke="rgba(42,124,163,.12)" stroke-width="1"/>
+            <circle cx="620" cy="122" r="3" fill="rgba(88,187,194,.4)"/>
+            <circle cx="660" cy="122" r="3" fill="rgba(88,187,194,.4)"/>
+          </svg></div>
+          <div class="pdtag">Part Two</div>
+          <div class="pdr"></div>
+          <div class="pdt">Walking Through<br>the Manual</div>
+          <div class="pds">Deconstruction of the Grind · Volume 1</div>
+          <div class="pdn">Your copy of Volume 1 is your companion, not a textbook.<br>These prompts help you move through it with intention, at your own pace.</div>
+        </div>
+        <div class="bd">
+          <p>Read a chapter. Sit with the questions in the following sections. Come back when you are ready for the next one. There is no timeline. There is no grade.</p>
+          <a class="cta" href="https://assets.cdn.filesafe.space/35XiTsvy0Kt7TRNBabas/media/69d9383401157e64b3cabb23.pdf" target="_blank" rel="noopener">Open Volume 1: Deconstruction of the Grind →</a>
+          <div class="snav"><button class="bprev" onclick="go(8)">← Knowledge Check</button><button class="bnext" onclick="go(10)">Chapters 1–2 →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S10: CH 1–2 ════════════════════════════════════════════════════ -->
+      <div class="sec" id="s10">
+        <div class="hero">
+          <div class="htag">Part Two · Volume 1</div>
+          <div class="htit">Naming the Load + The Masking Patterns</div>
+          <div class="htime">Read chapters 1–2, then reflect</div>
+        </div>
+        <div class="bd">
+          <h2>Chapter Area 1: Naming the Load</h2>
+          <div class="field"><label for="t1a">What in this section described something you have lived but never had language for?</label><textarea id="t1a" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t1a">0 characters</div></div>
+          <div class="field"><label for="t1b">Where in your professional history has the load been highest? What was the structure that produced it?</label><textarea id="t1b" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t1b">0 characters</div></div>
+          <h2>Chapter Area 2: The Masking Patterns</h2>
+          <div class="field"><label for="t2a">Which masking patterns feel most familiar to you? What do they cost you in a typical week?</label><textarea id="t2a" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t2a">0 characters</div></div>
+          <div class="field"><label for="t2b">Where do you feel most free to be fully yourself? What makes that space different?</label><textarea id="t2b" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t2b">0 characters</div></div>
+          <div class="snav"><button class="bprev" onclick="go(9)">← Part Two</button><button class="bnext" onclick="go(11)">Chapters 3–4 →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S11: CH 3–4 ════════════════════════════════════════════════════ -->
+      <div class="sec" id="s11">
+        <div class="hero">
+          <div class="htag">Part Two · Volume 1</div>
+          <div class="htit">Overload + Authority</div>
+          <div class="htime">Read chapters 3–4, then reflect</div>
+        </div>
+        <div class="bd">
+          <h2>Chapter Area 3: Overload and the Efficiency Myth</h2>
+          <div class="field"><label for="t3a">How has AI or automation changed your workload? Has it reduced your burden or shifted it?</label><textarea id="t3a" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t3a">0 characters</div></div>
+          <div class="field"><label for="t3b">What would it mean to use technology on your terms — as a tool you govern rather than one that governs you?</label><textarea id="t3b" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t3b">0 characters</div></div>
+          <h2>Chapter Area 4: Authority and Decision Rights</h2>
+          <div class="field"><label for="t4a">Where in your work right now are you accountable for outcomes you do not have full authority to manage?</label><textarea id="t4a" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t4a">0 characters</div></div>
+          <div class="field"><label for="t4b">What would need to change in your environment for that gap to close?</label><textarea id="t4b" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t4b">0 characters</div></div>
+          <div class="snav"><button class="bprev" onclick="go(10)">← Chapters 1–2</button><button class="bnext" onclick="go(12)">Chapters 5–6 →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S12: CH 5–6 ════════════════════════════════════════════════════ -->
+      <div class="sec" id="s12">
+        <div class="hero">
+          <div class="htag">Part Two · Volume 1</div>
+          <div class="htit">Rest + The Architect Posture</div>
+          <div class="htime">Read chapters 5–6, then reflect</div>
+        </div>
+        <div class="bd">
+          <h2>Chapter Area 5: Rest as a Structural Act</h2>
+          <div class="field"><label for="t5a">What does rest actually look like for you when it is working? When did you last have that?</label><textarea id="t5a" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t5a">0 characters</div></div>
+          <div class="field"><label for="t5b">What would you need to protect or renegotiate in order to make real recovery a regular part of your life?</label><textarea id="t5b" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t5b">0 characters</div></div>
+          <h2>Chapter Area 6: The Architect Posture</h2>
+          <div class="field"><label for="t6a">What would you design differently about your professional life if you had full authority to do it?</label><textarea id="t6a" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t6a">0 characters</div></div>
+          <div class="field"><label for="t6b">What is one thing you are ready to architect right now, even if it is small?</label><textarea id="t6b" rows="4" placeholder="Write what comes honestly..."></textarea><div class="cc" id="cc-t6b">0 characters</div></div>
+          <div class="snav"><button class="bprev" onclick="go(11)">← Chapters 3–4</button><button class="bnext" onclick="go(13)">Go Deeper →</button></div>
+        </div>
+      </div>
+
+      <!-- ═══ S13: GO DEEPER ════════════════════════════════════════════════ -->
+      <div class="sec" id="s13">
+        <div class="hero">
+          <div class="htag">Next Steps</div>
+          <div class="htit">Ready to Go Deeper?</div>
+        </div>
+        <div class="bd">
+
+          <!-- CLOSING RITUAL -->
+          <div class="ritual">
+            <div class="ritual-hexes">
+              <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+              <div class="hex"></div><div class="hex"></div>
+            </div>
+            <div class="ritual-line">You named what was structurally true.</div>
+            <div class="ritual-line">You claimed space to think clearly.</div>
+            <div class="ritual-line">You did not perform your way through this.</div>
+            <div class="ritual-line bold">That is not nothing.<br>That is the beginning of the architecture.</div>
+            <div class="ritual-line" style="font-size:clamp(19px,3vw,24px);font-weight:700;font-style:normal;color:#fff;margin-top:20px">You are already the Architect.</div>
+            <div class="ritual-sig">— Nikki</div>
+          </div>
+
+          <p style="margin-top:24px">The Strategic Reset Intensive is the entry point. What you have done here is real work. What is available next goes deeper.</p>
+
+          <!-- PRINT BUTTON -->
+          <button class="print-btn" onclick="printResponses()">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5 4a1 1 0 011-1h8a1 1 0 011 1v2H5V4zm-2 4h14a1 1 0 011 1v5a1 1 0 01-1 1h-2v2a1 1 0 01-1 1H6a1 1 0 01-1-1v-2H3a1 1 0 01-1-1V9a1 1 0 011-1zm3 7v-3h8v3H6z"/></svg>
+            Save or Print My Responses
+          </button>
+          <p style="font-size:12px;color:var(--ts);margin-top:6px;margin-bottom:24px">Opens a printable summary of everything you wrote. Save as PDF to keep a copy or share with Nikki for your VIP session.</p>
+
+          <div class="pw gd"><div class="pwtag">VIP Add-On · $997</div><h3>For the woman who needs more than the group can hold.</h3><p>A joint 75–90 minute session with both Nikki and Char. Tailored reset discussion, practical AI and operations recommendations, a short integrated written summary, and a brief follow-up window. This is not a deeper version of the group. It is a different kind of conversation entirely.</p><br><a class="cta gd" href="mailto:nikki@strategicunmasking.com?subject=VIP Add-On Inquiry">Inquire About the VIP →</a></div>
+
+          <div class="pw tl"><div class="pwtag">Tier 1: Premium Intensive · $3,000 – $7,500</div><h3>For the woman who is ready for precision.</h3><p>Full strategic reset at depth. Custom Strategic Reset Dossier, curated workbook, Nikki's interpretation layered throughout, and a high-touch but time-bound engagement designed for leaders who need more than awareness.</p></div>
+
+          <div class="pw pu"><div class="pwtag">Volume 3: The Soul of the System</div><h3>For the woman who wants to understand the architecture at the root.</h3><p>Volume 3 of the UNMASK Blueprint Series addresses the structural, historical, and spiritual conditions that produced what you have been navigating. If Volume 1 named your load, Volume 3 traces where it came from and what reclamation looks like at the deepest level.</p></div>
+
+          <div style="margin-top:28px;padding-top:22px;border-top:1px solid rgba(6,70,128,.08)">
+            <p><strong>To inquire about any of these options:</strong></p>
+            <a class="cta" href="mailto:nikki@strategicunmasking.com">nikki@strategicunmasking.com →</a><br>
+            <a class="cta pu" href="https://nikkicates.github.io" target="_blank" rel="noopener">nikkicates.github.io →</a>
+          </div>
+
+          <div style="margin-top:20px;text-align:center;font-size:12px;color:var(--ts)">© 2026 Strategic Transformations | Unbothered Resistance International | All Rights Reserved</div>
+          <div class="snav"><button class="bprev" onclick="go(12)">← Chapters 5–6</button></div>
+        </div>
+      </div>
+
+    </div><!-- inner -->
+    </main>
+  </div>
+</div>
+
+<!-- ═══ PRINT WINDOW ═══════════════════════════════════════════════════════ -->
+<script>
+const PWD = "reset2026";
+const SK  = "sri_v1";
+const TOT = 14;
+const VOL1_URL = "https://assets.cdn.filesafe.space/35XiTsvy0Kt7TRNBabas/media/69d9383401157e64b3cabb23.pdf";
+
+let cur = 0, data = {}, svTimer = null;
+let done = new Set();
+
+/* ── GATE ───────────────────────────────────────────────────────────────── */
+function checkPwd() {
+  const v = document.getElementById('pwd').value.trim().toLowerCase();
+  if (v === PWD.toLowerCase()) {
+    localStorage.setItem('sri_auth', PWD);
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('app').classList.add('on');
+    track('login', 0);
+    init();
+  } else {
+    const e = document.getElementById('gerr');
+    e.textContent = 'That password is not quite right. Check your confirmation email.';
+    document.getElementById('pwd').style.borderColor = '#ff8fa3';
+    setTimeout(() => { e.textContent = ''; document.getElementById('pwd').style.borderColor = ''; }, 3000);
+  }
+}
+document.getElementById('pwd').addEventListener('keydown', e => { if (e.key === 'Enter') checkPwd(); });
+window.addEventListener('load', () => {
+  if (localStorage.getItem('sri_auth') === PWD) {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('app').classList.add('on');
+    init();
+  }
+});
+
+/* ── INIT ───────────────────────────────────────────────────────────────── */
+function init() {
+  try { data = JSON.parse(localStorage.getItem(SK) || '{}'); } catch(e) { data = {}; }
+  done = new Set(data.__done || []);
+  restoreFields();
+  restoreTrack();
+  restoreQuizzes();
+  go(parseInt(data.__last || '0'));
+  setupFields();
+}
+
+/* ── NAVIGATION ─────────────────────────────────────────────────────────── */
+function go(n) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  const sec = document.getElementById('s' + n);
+  if (!sec) return;
+  sec.classList.add('on');
+  document.querySelectorAll('.sbi').forEach((el, i) => el.classList.toggle('active', i === n));
+  cur = n; data.__last = n; done.add(n);
+  save(); updateProg(); updateSB();
+  track('view', n);
+  document.getElementById('main').scrollTo(0, 0);
+  document.getElementById('sb').classList.remove('open');
+}
+function toggleSB() { document.getElementById('sb').classList.toggle('open'); }
+
+/* ── PROGRESS ───────────────────────────────────────────────────────────── */
+function updateProg() {
+  const pct = Math.round((done.size / TOT) * 100);
+  document.getElementById('pb').style.width = pct + '%';
+  document.getElementById('pbl').textContent = done.size + ' / ' + TOT;
+}
+function updateSB() {
+  document.querySelectorAll('.sbi').forEach((el, i) => {
+    el.classList.toggle('done', done.has(i) && i !== cur);
+    if (done.has(i)) el.querySelector('.sbd').style.background = 'var(--tll)';
+  });
+}
+
+/* ── FIELDS ─────────────────────────────────────────────────────────────── */
+function setupFields() {
+  document.querySelectorAll('textarea').forEach(ta => {
+    ta.addEventListener('input', () => {
+      data[ta.id] = ta.value;
+      const cc = document.getElementById('cc-' + ta.id);
+      if (cc) { cc.textContent = ta.value.length + ' characters'; cc.classList.toggle('has', ta.value.length > 0); }
+      clearTimeout(svTimer); svTimer = setTimeout(save, 700);
+    });
+  });
+}
+function restoreFields() {
+  document.querySelectorAll('textarea').forEach(ta => {
+    if (data[ta.id]) {
+      ta.value = data[ta.id];
+      const cc = document.getElementById('cc-' + ta.id);
+      if (cc) { cc.textContent = data[ta.id].length + ' characters'; if (data[ta.id].length) cc.classList.add('has'); }
+    }
+  });
+}
+
+/* ── TRACK ──────────────────────────────────────────────────────────────── */
+function selTrack(el) {
+  document.querySelectorAll('.track').forEach(t => t.classList.remove('sel'));
+  el.classList.add('sel');
+  data['__track'] = el.dataset.track;
+  save();
+}
+function restoreTrack() {
+  if (data['__track']) {
+    const el = document.querySelector(`.track[data-track="${data['__track']}"]`);
+    if (el) el.classList.add('sel');
+  }
+}
+
+/* ── QUIZ ───────────────────────────────────────────────────────────────── */
+function ans(el, qid, chosen, correct) {
+  const quiz = document.getElementById(qid);
+  if (quiz.dataset.done) return;
+  quiz.dataset.done = '1';
+  const num = qid.replace('q','');
+  quiz.querySelectorAll('.opt').forEach(o => {
+    const lt = o.querySelector('.olt').textContent;
+    if (lt === correct) o.classList.add('reveal');
+    if (lt === chosen && chosen !== correct) o.classList.add('wrong');
+    if (lt === chosen && chosen === correct) o.classList.add('right');
+    o.style.cursor = 'default';
+  });
+  document.getElementById('qa' + num).classList.add('on');
+  data['__q' + qid] = chosen;
+  save();
+  track('quiz', qid + '_' + chosen + '_' + (chosen === correct ? 'right' : 'wrong'));
+}
+function restoreQuizzes() {
+  const correct = {q1:'B',q2:'C',q3:'C'};
+  ['q1','q2','q3'].forEach(qid => {
+    if (!data['__' + qid]) return;
+    const quiz = document.getElementById(qid);
+    const num  = qid.replace('q','');
+    const ch   = data['__' + qid];
+    const co   = correct[qid];
+    quiz.dataset.done = '1';
+    quiz.querySelectorAll('.opt').forEach(o => {
+      const lt = o.querySelector('.olt').textContent;
+      if (lt === co) o.classList.add('reveal');
+      if (lt === ch && ch !== co) o.classList.add('wrong');
+      if (lt === ch && ch === co) o.classList.add('right');
+      o.style.cursor = 'default';
+    });
+    document.getElementById('qa' + num).classList.add('on');
+  });
+}
+
+/* ── SAVE ───────────────────────────────────────────────────────────────── */
+function save() {
+  data.__done = [...done];
+  localStorage.setItem(SK, JSON.stringify(data));
+  const sv = document.getElementById('sv');
+  sv.classList.add('on');
+  clearTimeout(svTimer);
+  svTimer = setTimeout(() => sv.classList.remove('on'), 2000);
+}
+
+/* ── PRINT ──────────────────────────────────────────────────────────────── */
+const FIELDS = [
+  { id: 'pulse',  label: 'Pulse Check — Workload Weather Report' },
+  { id: 'twhy',   label: 'Track Selection — Why I Chose This Track' },
+  { id: 'lbw',    label: 'Grounding Question — Stopping Being the Load-Bearing Wall' },
+  { id: 's1a',    label: 'Session 1 — What This Season Is Costing Me (Private)' },
+  { id: 's1b',    label: 'Session 1 — What My Body Has Been Telling Me' },
+  { id: 's1c',    label: 'Session 1 — The Invisible Labor Receipt' },
+  { id: 's1d',    label: 'Session 1 — Where I Manage Perception vs. Just Working' },
+  { id: 's1e',    label: 'Session 1 — The Version of Me That Shows Up Off-Work' },
+  { id: 's1f',    label: 'Session 1 — Responsibilities Without Full Authority' },
+  { id: 's1g',    label: 'Session 1 — Uncompensated Labor' },
+  { id: 's1h',    label: 'Session 1 — Workslop I Am Expected to Clean Up' },
+  { id: 's1i',    label: 'Session 1 — What the Spirit Knows' },
+  { id: 's1j',    label: 'Session 1 — What I Would Ask For If Fully Held' },
+  { id: 's1k',    label: 'Session 1 — Reset Thesis First Draft' },
+  { id: 'b1',     label: 'Between Sessions — Biggest Drain' },
+  { id: 'b2',     label: 'Between Sessions — Technology: Helping vs. Hurting' },
+  { id: 'b3',     label: 'Between Sessions — One Thing to Stop Carrying' },
+  { id: 'b4',     label: 'Between Sessions — What Has Not Been Fully Said' },
+  { id: 's2a',    label: 'Session 2 — What I Am Most Ready to Stop Absorbing' },
+  { id: 's2b',    label: 'Session 2 — What Operating at Capacity Looks Like' },
+  { id: 's2c',    label: 'Session 2 — The 30-Day Boundary' },
+  { id: 's2d',    label: '30-Day Commitment — Stop' },
+  { id: 's2e',    label: '30-Day Commitment — Stabilize' },
+  { id: 's2f',    label: '30-Day Commitment — Test' },
+  { id: 'p1',     label: 'Post-Session — What Shifted' },
+  { id: 'p2',     label: 'Post-Session — What I Still Need to Sit With' },
+  { id: 'p3',     label: 'Post-Session — The One Structural Truth' },
+  { id: 'p4',     label: 'Post-Session — The Support I Actually Need' },
+  { id: 'qr',     label: 'Knowledge Check — Personal Reflection' },
+  { id: 't1a',    label: 'Vol. 1 Ch. 1 — Language I Never Had' },
+  { id: 't1b',    label: 'Vol. 1 Ch. 1 — Where the Load Was Highest' },
+  { id: 't2a',    label: 'Vol. 1 Ch. 2 — Masking Patterns and Their Cost' },
+  { id: 't2b',    label: 'Vol. 1 Ch. 2 — Where I Feel Most Free' },
+  { id: 't3a',    label: 'Vol. 1 Ch. 3 — How AI Changed My Workload' },
+  { id: 't3b',    label: 'Vol. 1 Ch. 3 — Technology on My Terms' },
+  { id: 't4a',    label: 'Vol. 1 Ch. 4 — Accountability Without Authority' },
+  { id: 't4b',    label: 'Vol. 1 Ch. 4 — What Needs to Change' },
+  { id: 't5a',    label: 'Vol. 1 Ch. 5 — What Rest Looks Like When It Works' },
+  { id: 't5b',    label: 'Vol. 1 Ch. 5 — What to Protect or Renegotiate' },
+  { id: 't6a',    label: 'Vol. 1 Ch. 6 — What I Would Design Differently' },
+  { id: 't6b',    label: 'Vol. 1 Ch. 6 — One Thing I Am Ready to Architect' },
+];
+
+function printResponses() {
+  const trackMap = { leader: 'The Leader', jobseeker: 'The Job-Seeker', founder: 'The Founder' };
+  const track = trackMap[data['__track']] || 'Not selected';
+  const date  = new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+
+  let rows = '';
+  FIELDS.forEach(f => {
+    const val = (data[f.id] || '').trim();
+    if (!val) return;
+    rows += `
+      <div class="entry">
+        <div class="entry-label">${f.label}</div>
+        <div class="entry-text">${val.replace(/\n/g, '<br>')}</div>
+      </div>`;
+  });
+
+  if (!rows) {
+    rows = '<p style="color:#666;font-style:italic">No responses recorded yet.</p>';
+  }
+
+  const html = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Strategic Reset — My Responses</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;600&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'DM Sans',sans-serif;font-size:13px;color:#0f1929;background:#fff;padding:0}
+  .header{background:#021b36;padding:28px 40px;display:flex;align-items:center;justify-content:space-between}
+  .header-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff}
+  .header-sub{font-size:11px;color:#58bbc2;margin-top:3px;letter-spacing:1px;text-transform:uppercase}
+  .header-meta{text-align:right;font-size:11px;color:rgba(255,255,255,.5);line-height:1.7}
+  .header-meta strong{color:rgba(255,255,255,.8)}
+  .hexbar{height:4px;background:linear-gradient(90deg,#2a7ca3,#ac6dbf,#f3a712)}
+  .body{padding:32px 40px 48px}
+  .intro{background:#edf1f8;border-left:4px solid #064680;padding:14px 18px;border-radius:6px;margin-bottom:28px;font-size:12.5px;color:#2e2650;line-height:1.6}
+  .intro strong{color:#064680}
+  .entry{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #eee;page-break-inside:avoid}
+  .entry:last-child{border-bottom:none}
+  .entry-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#2a7ca3;margin-bottom:7px}
+  .entry-text{font-size:13.5px;line-height:1.75;color:#0f1929;white-space:pre-wrap}
+  .footer{margin-top:36px;padding-top:18px;border-top:1px solid #eee;text-align:center;font-size:11px;color:#aaa}
+  @media print{
+    body{font-size:12px}
+    .header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .hexbar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .entry{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <div class="header-title">The Strategic Reset Intensive</div>
+    <div class="header-sub">My Responses — Participant Workbook</div>
+  </div>
+  <div class="header-meta">
+    <div>Printed: <strong>${date}</strong></div>
+    <div>Track: <strong>${track}</strong></div>
+    <div>Sections visited: <strong>${done.size} / ${TOT}</strong></div>
+  </div>
+</div>
+<div class="hexbar"></div>
+<div class="body">
+  <div class="intro">
+    This document contains your personal responses from the Strategic Reset Intensive workbook at <strong>nikkicates.github.io/reset</strong>. 
+    Save this PDF for your own records or share it with Nikki ahead of your VIP session. 
+    Your responses remain private unless you choose to share them.
+  </div>
+  ${rows}
+  <div class="footer">
+    © 2026 Strategic Transformations | Unbothered Resistance International<br>
+    nikkicates.github.io | nikki@strategicunmasking.com
+  </div>
+</div>
+<script>window.onload=()=>window.print();<\/script>
+</body>
+</html>`;
+
+  const w = window.open('', '_blank');
+  w.document.write(html);
+  w.document.close();
+}
+
+/* ── ANALYTICS ──────────────────────────────────────────────────────────── */
+const AT_BASE  = '';   // Add your Airtable base ID to activate
+const AT_TABLE = 'Analytics';
+const AT_TOKEN = '';   // Add your Airtable PAT to activate
+
+function track(event, detail) {
+  if (!AT_TOKEN || !AT_BASE) return;
+  fetch(`https://api.airtable.com/v0/${AT_BASE}/${AT_TABLE}`, {
+    method: 'POST',
+    headers: { 'Authorization': `Bearer ${AT_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ fields: { Event: event, Detail: String(detail), Cohort: 'cohort_' + new Date().getFullYear(), TS: new Date().toISOString() } })
+  }).catch(() => {});
+}
+</script>
+</body>
+</html>
